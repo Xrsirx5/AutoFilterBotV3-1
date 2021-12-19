@@ -335,3 +335,10 @@ async def bot_info(bot, message):
         ]
         ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+
+else:
+        await bot.send_photo(
+        chat_id=message.from_user.id,
+        photo="https://telegra.ph/file/d0e1c8f4e298018d1f32a.mp4",
+        caption=START_MSG.format(message.from_user.first_name),
+        parse_mode="html",
