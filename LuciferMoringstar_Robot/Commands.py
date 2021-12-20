@@ -108,6 +108,11 @@ async def start(bot, message):
                 ]
             )
         )
+await update.reply_photo(
+        "https://telegra.ph/file/100.jpg",
+        caption=START_TEXT.format(update.from_user.first_name),
+        reply_markup=reply_markup,
+    )
     else:
         await message.reply_text(
             START_MSG,
